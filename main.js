@@ -17,6 +17,8 @@ cognome=cognome.toLowerCase(); //Rendo tutta la stinga minuscola
 
 cognome=cognome.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));   //Rende la prima lettera maiuscola
 
+cognome=cognome.trim(); //elimina spazi ai lati della stringa
+
 cognomi.push(cognome);
 
 cognomi.sort();
