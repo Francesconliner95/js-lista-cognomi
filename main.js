@@ -1,4 +1,4 @@
-var cognomi = ['divincenzo', 'tarantino', 'deleonardis', 'losacco', 'rossi', 'stasolla'];
+var cognomi = ['Divincenzo', 'Tarantino', 'Deleonardis', 'Losacco', 'Rossi', 'Stasolla'];
 var posizione;
 var n=true;
 
@@ -12,6 +12,10 @@ do{
         alert('Cognome già presente, inseriscine un altro!');
     }
 }while(!isNaN(cognome) || n==true)
+
+cognome=cognome.toLowerCase(); //Rendo tutta la stinga minuscola
+
+cognome=cognome.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));   //Rende la prima lettera maiuscola
 
 cognomi.push(cognome);
 
